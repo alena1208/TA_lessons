@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke tests" verbose="1" >
+    <test name="Smoke test 1"   >
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="SimpleTest1"/>
+        </classes>
+    </test>
+</suite>
+<!-- Прогон только группы тестов из определенного класса-->

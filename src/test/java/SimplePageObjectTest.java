@@ -28,7 +28,7 @@ public class SimplePageObjectTest {
     }
 
     @Test
-    public void simpleMediaTest() {
+    public void simpleLoginTest() {
         indexPage.open(driver);
         indexPage.login("epam", "1234");
         indexPage.checkPageTitle(driver);

@@ -26,12 +26,12 @@ public class IndexPage {
         @FindBy(css = ".form-horizontal [type='submit']")
         private WebElement submitButton;
 
-        @Step
+        @Step("Открытие сайта https://epam.github.io/JDI/index.html")
         public void open(WebDriver driver) {
             driver.navigate().to("https://epam.github.io/JDI/index.html");
         }
 
-        @Step
+        @Step("Логин с заданным именем и паролем")
         public void login(String name, String password) {
             loginFormButton.click();
             loginInput.sendKeys(name);
@@ -39,7 +39,7 @@ public class IndexPage {
             submitButton.click();
         }
 
-        @Step
+        @Step("Проверка загаловка страницы")
         public void checkPageTitle(WebDriver driver) {
             assertEquals(driver.getTitle(),"Home Page");
         }
